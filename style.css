@@ -1,35 +1,28 @@
-/* Make everything completely transparent */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: transparent; /* Fully transparent */
+    background: none; /* Removed background */
 }
 
-/* Remove any background from teams */
 .team {
     margin: 20px auto;
     padding: 10px;
     width: 300px;
-    background: none; /* Transparent */
 }
 
-/* Strikes layout */
 .strikes {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-/* X shape */
 .strike {
     width: 40px;
     height: 40px;
     position: relative;
     cursor: pointer;
-    background: none; /* Transparent */
 }
 
-/* Default Gray X */
 .strike::before,
 .strike::after {
     content: "";
@@ -43,23 +36,19 @@ body {
     transition: background 0.3s;
 }
 
-/* Second line of X */
 .strike::after {
     transform: translateY(-50%) rotate(-45deg);
 }
 
-/* Red X when clicked */
 .strike.red::before,
 .strike.red::after {
     background: red;
 }
 
-/* Loss message (Hidden by default) */
 .lose-message {
     color: red;
     font-size: 18px;
     font-weight: bold;
     display: none;
     margin-top: 10px;
-    background: none; /* Transparent */
 }
